@@ -1,0 +1,4 @@
+free -m | grep Mem | awk '{print$7}'
+
+
+ 
