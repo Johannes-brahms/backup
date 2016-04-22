@@ -24,9 +24,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 
-let g:airline_theme='base16' 
-"let g:airline_theme='wombat'
-
+let g:airline_theme='base16_tomorrow' 
+"et g:airline_theme='wombat'
+"let g:airline_left_sep='>'
 
 
 hi Normal ctermbg=none
@@ -42,35 +42,20 @@ if !exists('g:airline_symbols')
 	     let g:airline_symbols = {}
 endif
 
-"unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-
-let g:airline_symbols.branch = '⎇'
-
-
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-"
-" airline symbols
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
 
 
 
-"let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.linenr = ''
-"let g:ycm_autoclose_preview_window_after_insertion = 1 
+let g:letirline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+let g:airline#extensions#whitespace#enabled = 0
+
+
 "let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:ycm_server_keep_logfiles = 1
