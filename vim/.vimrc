@@ -85,3 +85,9 @@ set guifont=DejaVu\ Sans:s12
 nmap <c-s> :update<CR>
 imap <c-s> <c-o>:update<CR>
 vmap <c-s> <c-c>:update<CR>
+set t_Co=256
+" If you prefer the Omni-Completion tip window to close when a selection is
+" " made, these lines close it on movement in insert mode or when leaving
+" " insert mode
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
