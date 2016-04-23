@@ -110,4 +110,6 @@ set clipboard=unnamed
 set clipboard=unnamedplus
 
 
-
+set cmdheight=1
+set noshowmode
+set noruler 
