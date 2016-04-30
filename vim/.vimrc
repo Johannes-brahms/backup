@@ -14,7 +14,9 @@ Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/L9'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Shougo/unite.vim'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'chriskempson/base16-vim'
 Plugin 'vim-scripts/OmniCppComplete'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -24,7 +26,8 @@ filetype plugin on
 
 set autoindent
 
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 colorscheme gruvbox
 
 set nu
 set laststatus=2
@@ -63,12 +66,12 @@ let g:airline_theme='base16_tomorrow'
 let g:airline_powerline_fonts = 1
 
 
-"let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 let g:ycm_server_keep_logfiles = 1
 let g:ycm_server_log_level = 'debug'
 
-colorscheme gruvbox
+
 
 "set omnifunc=syntaxcomplete#Complete
 
@@ -124,8 +127,8 @@ set t_Co=256
 
 
 " autoclose preview window
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 set clipboard=unnamed
 set clipboard=unnamedplus
