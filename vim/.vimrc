@@ -166,6 +166,6 @@ let g:neocomplcache_same_filetype_lists._ = '_'
 
 
 " Popup color.
-"hi Pmenu ctermbg=0
-hi PmenuSel ctermbg=0 ctermfg=3
+hi Pmenu ctermbg=8 ctermfg=0
+hi PmenuSel ctermbg=11 ctermfg=8
 "hi PmenuSbar ctermbg=4
