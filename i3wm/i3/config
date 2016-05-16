@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 11
+font pango:Terminess Powerline 13
 # default 10 
 bindsym $mod+Control+Shift+k focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, focus parent, kill
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -40,10 +40,13 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec i3-dmenu-desktop
 #dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that# installed.
 
+
+# dmenu
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec "dmenu_run -fn 'Monospace 20'"
+bindsym $mod+d exec dmenu_run -i -b -p 'Arch Linux' -fn 'Monospace:bold:pixelsize=15' -nb '#fdf6e3' -nf '#586c75' -sf '#fdf6e3' -sb '#b58900'
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -108,8 +111,7 @@ bindsym $mod+4 workspace 4
 # 
 bindsym $mod+5 workspace 5
 # 
-bindsym $mod+6 workspace ︃︃6
-
+bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
@@ -132,10 +134,7 @@ bindsym $mod+Shift+4 move container to workspace 4
 #
 bindsym $mod+Shift+5 move container to workspace 5
 #
-bindsym $mod+Shift+6 move container to workspace ︃6
-
-
-
+bindsym $mod+Shift+6 move container to workspace 6
 #
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -196,14 +195,18 @@ bar {
 		}
 		#status_command i3status -c ~/.config/i3/i3status.conf
 		status_command i3blocks
-		#status_command python ~/scripts/pystatus.py 
+		
+        #status_command python ~/.i3/powerline-lemonbar.py 
+        #font pango:PowerlineFont 12
+
+        #status_command python ~/scripts/pystatus.py 
 		#
-	#	i3bar_command i3bar -t
+		#i3bar_command i3bar -t
 		
 		#height 2
 }
 
-gaps inner 10
+gaps inner 5
 gaps outer 10
 #smart_gaps on
 #  <border> <background> <text>
@@ -211,9 +214,9 @@ client.focused #87AD8F #87AD8F #212121 #99C47F
 #client.background   #87AD8F
 
 
-exec --no-startup-id feh --bg-scale Desktop/feofania_kiev_cathedral_reflection_pond_101104_3840x2160.jpg 
+exec --no-startup-id feh --bg-scale ./Downloads/Sx68ppx-best-background-pictures-ever.jpg 
 	
-
+exec --no-startup-id compton --vsync opengl &
 
 for_window [class="^.*"] border pixel 0
 #
@@ -232,7 +235,6 @@ for_window [title="^.chrome*"] floating disable
 #new_float normal
 #exec --no-startup-id xautolock -detectsleep -time 5 -locker 'i3lock -c 000000 && systemctl suspend'
 
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 
 

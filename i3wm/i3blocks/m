@@ -1,3 +1,0 @@
-m=cat /proc/meminfo | grep MemAv | awk {'print$2'}
-
-echo $m
